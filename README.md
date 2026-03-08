@@ -1,52 +1,48 @@
-# Semantic Emergency Analysis using NLP
+# Semantic Emergency Analysis using Ontologies
 
-This project analyzes emergency call transcripts using Natural Language Processing (NLP) and transformer-based models.
+This project explores the use of semantic technologies and knowledge representation to analyze emergency reports.
 
-The system extracts relevant entities such as persons and locations from emergency reports.
-
----
-
-## Overview
-
-Emergency reports contain critical information in unstructured text.
-
-This project explores how NLP techniques can transform those reports into structured information for decision support systems.
+The system combines Natural Language Processing (NLP) with ontologies and logical rules to infer priority levels in emergency incidents.
 
 ---
 
 ## Technologies
 
-Python  
-Hugging Face Transformers  
-PyTorch  
-BERT  
-Named Entity Recognition  
-Pandas  
-Scikit-learn
+OWL Ontology  
+SWRL Rules  
+Protégé  
+SPARQL  
+Natural Language Processing
 
 ---
 
-## Hugging Face Model
+## Objective
 
-NER model trained for Spanish emergency reports:
-
-https://huggingface.co/dannyLeo16/ner_model_bert_base
+The goal of this project is to transform unstructured emergency reports into structured knowledge that can support automated reasoning and decision-making.
 
 ---
 
-## Example Usage
+## Knowledge Representation
 
-```python
-from transformers import pipeline
+The ontology models entities related to emergency incidents, such as:
 
-ner = pipeline(
-    "ner",
-    model="dannyLeo16/ner_model_bert_base",
-    tokenizer="dannyLeo16/ner_model_bert_base"
-)
+- Persons
+- Locations
+- Incident types
+- Priority levels
 
-text = "Hay una persona herida en la avenida Loja"
+SWRL rules are used to infer emergency priority based on extracted information.
 
-result = ner(text)
+---
 
-print(result)
+## Applications
+
+- Emergency management systems
+- Decision support for call centers
+- Semantic analysis of incident reports
+
+---
+
+## Author
+
+Danny Paltin
